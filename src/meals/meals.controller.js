@@ -65,8 +65,8 @@ function hasOnlyValidProperties(req, res, next) {
 
 module.exports = {
    list: asyncErrorBoundary(list),
-   read: [asynErrorBoundary(mealExists), read],
-   create: [hasOnlyValidProperties, hasRequiredProperties, asynErrorBoundary(create)],
-   update: [asynErrorBoundary(mealExists), hasOnlyValidProperties, hasRequiredProperties, asynErrorBoundary(update)],
-   delete: [asynErrorBoundary(mealExists), asynErrorBoundary(destroy)],
+   read: [asyncErrorBoundary(mealExists), read],
+   create: [hasOnlyValidProperties, hasRequiredProperties, asyncErrorBoundary(create)],
+   update: [asyncErrorBoundary(mealExists), hasOnlyValidProperties, hasRequiredProperties, asyncErrorBoundary(update)],
+   delete: [asyncErrorBoundary(mealExists), asyncErrorBoundary(destroy)],
 };
