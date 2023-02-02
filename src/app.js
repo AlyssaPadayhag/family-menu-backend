@@ -4,8 +4,9 @@ require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
 const express = require("express");
 
-const app = express();
 const mealsRouter = require('./meals/meals.router');
+
+const app = express();
 
 app.use(express.json());
 
