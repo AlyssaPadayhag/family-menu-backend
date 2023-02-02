@@ -4,11 +4,11 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-const path = require('path');
 require('dotenv').config();
+const path = require("path");
 
 const { 
-  DATABASE_URL  = 'postgres://dfowzbgi:i8XfiJEK460eC4hFmOVyh0kGh__DNAWM@fanny.db.elephantsql.com/dfowzbgi' 
+  DATABASE_URL  = 'postgresql://postgres@localhost/postgres' 
 } = process.env;
 
 module.exports = {
