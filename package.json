@@ -2,7 +2,7 @@
   "name": "family-menu-backend",
   "version": "1.0.0",
   "description": "family menu backend data",
-  "main": "src/server.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
